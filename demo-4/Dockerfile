@@ -9,8 +9,8 @@ WORKDIR /app
 COPY FirstContainer/. .
 
 # 4). Let's run the appropriate dotnet commands
-RUN dotnet restore 
-RUN dotnet publish -c Release -o out
+# RUN dotnet restore 
+# RUN dotnet publish -c Release -o out
 
-# At this point, we have our application built!, so let's set an entrypoint
-ENTRYPOINT [ "dotnet", "out/FirstContainer.dll" ]
+# 5). Let's set the command to run when the container starts
+# ENTRYPOINT [ "dotnet", "out/FirstContainer.dll" ]

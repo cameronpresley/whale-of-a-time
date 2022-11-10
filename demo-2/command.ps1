@@ -11,9 +11,12 @@ Write-Host 'Creating postgres container'
 # -d -> Run detatched (e.g. don't lock the UI thread)
 # -p -> Port Forwarding (e.g. have the port from local machine map to port on container)
 docker run `
+ --rm `
  --name database `
  -p 5432:5432 `
  -e POSTGRES_PASSWORD=SuperCoolPassword! `
+ -e POSTGRES_DB=Weather `
  -d `
  postgres:15.0-alpine
+
 
