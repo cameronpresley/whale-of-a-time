@@ -6,7 +6,7 @@ BEGIN;
   CREATE TABLE IF NOT EXISTS forecasts (
     id SERIAL NOT NULL PRIMARY KEY,
     date TIMESTAMPTZ,
-    temperature INT,
+    temperatureC INT,
     summary TEXT NOT NULL
   );
 COMMIT;
